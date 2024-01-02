@@ -1,3 +1,4 @@
+import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
@@ -13,35 +14,33 @@ import java.util.ArrayList;
 import java.util.List;
 
 /**
- * 1-) Open the URL
- * 2-) Click "WebOrder" button on top bar.
- * 3-) Enter valid username "Inar" and password "Academy".
- * 4-) Navigate to the view all order page.
- * 5-) Click "Add More Data" "4" times.
- * 6-) Click "Check All" button.
- * 7-) Verify all orders selected.
+ * 1-) Open the URL 2-) Click "WebOrder" button on top bar. 3-) Enter valid username
+ * "Inar" and password "Academy". 4-) Navigate to the view all order page. 5-) Click
+ * "AddMore Data" "4" times. 6-) Click "Check All" button. 7-) Verify all orders selected.
  */
 public class WO_010_VAO_01 extends Hooks {
-    @Test
-    void testVerifyCheckAllFunctionalityInViewAllOrderPage() {
-        // 2. Click on weborder link
-        WebElement webOrderLink = driver.findElement(By.xpath("//a[@href='/weborder']"));
-        webOrderLink.click();
 
-        // 3. Enter "Inar" as username and "Academy" password.
-        WebElement userNameInputField = driver.findElement(By.id("login-username-input"));
-        WebElement passwordInputField = driver.findElement(By.id("login-password-input"));
+	@Test
+	void testVerifyCheckAllFunctionalityInViewAllOrderPage() {
+		// 2. Click on weborder link
+		WebElement webOrderLink = driver.findElement(By.xpath("//a[@href='/weborder']"));
+		webOrderLink.click();
 
-        userNameInputField.sendKeys("Inar");
-        passwordInputField.sendKeys("Academy");
+		// 3. Enter "Inar" as username and "Academy" password.
+		WebElement userNameInputField = driver.findElement(By.id("login-username-input"));
+		WebElement passwordInputField = driver.findElement(By.id("login-password-input"));
 
-        // Click on the "Login" button.
-        WebElement loginButton = driver.findElement(By.id("login-button"));
-        loginButton.click();
+		userNameInputField.sendKeys("Inar");
+		passwordInputField.sendKeys("Academy");
 
-        for (int i = 0; i < 4; i++) {
-        WebElement addMore4Data = driver.findElement(By.xpath("//button[text()='Add More Data']"));
-        addMore4Data.click();
-        }
-    }
+		// Click on the "Login" button.
+		WebElement loginButton = driver.findElement(By.id("login-button"));
+		loginButton.click();
+
+		for (int i = 0; i < 4; i++) {
+			WebElement addMore4Data = driver.findElement(By.xpath("//button[text()='Add More Data']"));
+			addMore4Data.click();
+		}
+	}
+
 }

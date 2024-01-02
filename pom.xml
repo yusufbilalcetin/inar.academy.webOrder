@@ -67,7 +67,7 @@
                     <!-- Specific configuration for JUnit 5. -->
                     <useModulePath>false</useModulePath>
                     <includes>
-                        <include>**/*Test.java</include>
+                        <include>**/*.java</include>
                     </includes>
                 </configuration>
             </plugin>
