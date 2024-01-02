@@ -36,9 +36,4 @@ class WO_011_VAO_02 extends Hooks {
 		allOrdersSelected.click();
 	}
 
-	@AfterEach
-	void tearDown() {
-		driver.quit();
-	}
-
 }

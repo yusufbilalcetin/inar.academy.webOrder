@@ -42,9 +42,4 @@ public class WO_012_VAO_03 extends Hooks {
 		allOrdersSelected5.click();
 	}
 
-	@AfterEach
-	void tearDown() {
-		driver.quit();
-	}
-
 }

@@ -43,9 +43,4 @@ public class WO_010_VAO_01 extends Hooks {
 		}
 	}
 
-	@AfterEach
-	void tearDown() {
-		driver.quit();
-	}
-
 }
