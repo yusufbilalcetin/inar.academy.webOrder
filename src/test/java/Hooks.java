@@ -45,11 +45,4 @@ public class Hooks {
 		driver.get("https://InarAcademy:Fk160621.@test.inar-academy.com");
 	}
 
-	@AfterAll
-	public static void tearDown() {
-		if (driver != null) {
-			driver.quit();
-		}
-	}
-
 }

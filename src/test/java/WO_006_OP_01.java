@@ -164,4 +164,9 @@ public class WO_006_OP_01 extends Hooks {
 		}
 	}
 
+	@AfterEach
+	void tearDown() {
+		driver.quit();
+	}
+
 }

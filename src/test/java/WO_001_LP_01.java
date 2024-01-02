@@ -29,4 +29,9 @@ public class WO_001_LP_01 extends Hooks {
 		loginButton.click();
 	}
 
+	@AfterEach
+	void tearDown() {
+		driver.quit();
+	}
+
 }

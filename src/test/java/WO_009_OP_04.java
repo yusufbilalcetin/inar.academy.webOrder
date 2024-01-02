@@ -158,4 +158,9 @@ public class WO_009_OP_04 extends Hooks {
 		viewAllOrderLink.click();
 	}
 
+	@AfterEach
+	void tearDown() {
+		driver.quit();
+	}
+
 }

@@ -42,4 +42,9 @@ public class WO_004_CF_01 extends Hooks {
 		webCalculateButton.click();
 	}
 
+	@AfterEach
+	void tearDown() {
+		driver.quit();
+	}
+
 }
