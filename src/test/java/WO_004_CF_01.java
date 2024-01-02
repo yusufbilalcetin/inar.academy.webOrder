@@ -40,6 +40,7 @@ public class WO_004_CF_01 extends Hooks {
 
 		WebElement webCalculateButton = driver.findElement(By.xpath("//button[text()='Calculate']"));
 		webCalculateButton.click();
+
 	}
 
 }

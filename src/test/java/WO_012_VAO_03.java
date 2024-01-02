@@ -32,14 +32,14 @@ public class WO_012_VAO_03 extends Hooks {
 			WebElement addMore4Data = driver.findElement(By.xpath("//button[text()='Add More Data']"));
 			addMore4Data.click();
 		}
-		WebElement allOrdersSelected = driver.findElement(By.xpath("(//input[@class='form-check-input'])[1]"));
-		allOrdersSelected.click();
+		WebElement allOrdersSelected_1 = driver.findElement(By.xpath("(//input[@class='form-check-input'])[1]"));
+		allOrdersSelected_1.click();
 
-		WebElement allOrdersSelected3 = driver.findElement(By.xpath("(//input[@class='form-check-input'])[3]"));
-		allOrdersSelected3.click();
+		WebElement allOrdersSelected_3 = driver.findElement(By.xpath("(//input[@class='form-check-input'])[3]"));
+		allOrdersSelected_3.click();
 
-		WebElement allOrdersSelected5 = driver.findElement(By.xpath("(//input[@class='form-check-input'])[5]"));
-		allOrdersSelected5.click();
+		WebElement allOrdersSelected_5 = driver.findElement(By.xpath("(//input[@class='form-check-input'])[5]"));
+		allOrdersSelected_5.click();
 	}
 
 }
