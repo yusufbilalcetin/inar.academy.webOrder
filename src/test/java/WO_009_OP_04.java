@@ -156,7 +156,6 @@ public class WO_009_OP_04 extends Hooks {
 		// Navigate to view all orders page.
 		WebElement viewAllOrderLink = driver.findElement(By.cssSelector("#view-orders-tab > a"));
 		viewAllOrderLink.click();
-
 	}
 
 }
