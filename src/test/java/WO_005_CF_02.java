@@ -2,6 +2,10 @@ import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
+import org.openqa.selenium.support.ui.Select;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * 1-) Open the URL. 2-) Click "WebOrder" button on top bar. 3-) Enter valid username
@@ -11,6 +15,8 @@ import org.openqa.selenium.WebElement;
  * message is displayed.
  */
 public class WO_005_CF_02 extends Hooks {
+
+	List<String> orderInformation = new ArrayList<>();
 
 	@Test
 	void testVerifyCalculateFunctionalityInOrderPageInvalidInput() {
@@ -31,6 +37,10 @@ public class WO_005_CF_02 extends Hooks {
 
 		WebElement webOrderButton = driver.findElement(By.xpath("//a[@href='/weborder/order']"));
 		webOrderButton.click();
+
+		WebElement productDropdown = driver.findElement(By.xpath("//*[@id=\"productSelect\"]"));
+		Select productSelect = new Select(productDropdown);
+		productSelect.selectByVisibleText("HomeDecor");
 
 		WebElement webDiscountInputField = driver.findElement(By.id("discountInput"));
 		webDiscountInputField.sendKeys("20");

@@ -28,13 +28,6 @@ public class WO_003_LP_03 extends Hooks {
 		WebElement loginButton = driver.findElement(By.id("login-button"));
 		loginButton.click();
 
-		try {
-			Thread.sleep(5500);
-		}
-		catch (InterruptedException e) {
-			throw new RuntimeException(e);
-		}
-
 		WebElement logoutButton = driver.findElement(By.id("logout-button"));
 		logoutButton.click();
 	}
