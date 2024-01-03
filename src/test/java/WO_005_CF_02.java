@@ -45,7 +45,6 @@ public class WO_005_CF_02 extends Hooks {
 		WebElement webDiscountInputField = driver.findElement(By.id("discountInput"));
 		webDiscountInputField.sendKeys("20");
 
-
 		WebElement webCalculateButton = driver.findElement(By.xpath("//button[text()='Calculate']"));
 		webCalculateButton.click();
 	}
