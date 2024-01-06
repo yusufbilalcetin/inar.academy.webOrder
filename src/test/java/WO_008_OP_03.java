@@ -1,4 +1,3 @@
-import org.junit.jupiter.api.AfterEach;
 import org.junit.jupiter.api.Assertions;
 import org.junit.jupiter.api.Test;
 import org.openqa.selenium.*;
@@ -9,6 +8,8 @@ import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+
+import static org.junit.jupiter.api.Assertions.assertTrue;
 
 /**
  * 1-) Open the URL. 2-) Click "WebOrder" button on top bar. 3-) Enter valid username
@@ -159,6 +160,8 @@ public class WO_008_OP_03 extends Hooks {
 		// Navigate to view all orders page.
 		WebElement viewAllOrderLink = driver.findElement(By.cssSelector("#view-orders-tab > a"));
 		viewAllOrderLink.click();
+		WebElement invalidProductInformationAlert = driver.findElement(By.xpath("//em[text()='Zip Code is invalid']"));
+		assertTrue(invalidProductInformationAlert.isDisplayed(), "Wrong Zip Code is accepted and order is added!");
 	}
 
 }

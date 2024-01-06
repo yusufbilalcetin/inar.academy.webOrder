@@ -3,6 +3,8 @@ import org.junit.jupiter.api.Test;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 1-) Open the URL. 2-) Click "WebOrder" button on top bar. 3-) Enter valid username
  * "Inar" and password "Academy". 4-) Navigate to the order page. 5-) Select "HomeDecor"
@@ -41,6 +43,8 @@ public class WO_004_CF_01 extends Hooks {
 		WebElement webCalculateButton = driver.findElement(By.xpath("//button[text()='Calculate']"));
 		webCalculateButton.click();
 
+		WebElement totalTextField = driver.findElement(By.id("totalInput"));
+		assertEquals("638", totalTextField.getAttribute("value"));
 	}
 
 }

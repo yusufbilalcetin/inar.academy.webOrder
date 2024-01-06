@@ -7,6 +7,8 @@ import org.openqa.selenium.support.ui.Select;
 import java.util.ArrayList;
 import java.util.List;
 
+import static org.junit.jupiter.api.Assertions.assertEquals;
+
 /**
  * 1-) Open the URL. 2-) Click "WebOrder" button on top bar. 3-) Enter valid username
  * "Inar" and password "Academy". 4-) Navigate to the order page. 5-) Select "ScreenSaver"
@@ -47,6 +49,9 @@ public class WO_005_CF_02 extends Hooks {
 
 		WebElement webCalculateButton = driver.findElement(By.xpath("//button[text()='Calculate']"));
 		webCalculateButton.click();
+
+		WebElement totalTextField = driver.findElement(By.id("totalInput"));
+		assertEquals("638", totalTextField.getAttribute("value"));
 	}
 
 }
